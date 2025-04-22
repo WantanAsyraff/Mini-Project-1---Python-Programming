@@ -1,12 +1,11 @@
-#Jerin
 import tkinter as tk
 from tkinter import ttk
 
-# Warna tema
+
 BG_COLOR = "#f9f9f9"
 HEADER_COLOR = "#4da6ff"
 BUTTON_COLOR = "#5cdb95"
-TEXT_COLOR = "#05386b"
+TEXT_COLOR = "#b8c2cc"
 
 
 
@@ -24,19 +23,22 @@ main_frame = tk.Frame(window, bg=BG_COLOR)
 main_frame.pack(pady=20)
 
 
-tk.Label(main_frame, text="rgd", font=("Helvetica", 12), bg=BG_COLOR, fg=TEXT_COLOR).grid(row=0, column=0, sticky="w", padx=10, pady=5)
-entry_nama = tk.Entry(main_frame, font=("Helvetica", 12), width=30)
-entry_nama.grid(row=0, column=1, padx=10, pady=5)
+tk.Label(main_frame, text="No. Bilik", font=("Helvetica", 12), bg=BG_COLOR, fg=TEXT_COLOR).grid(row=0, column=0, sticky="w", padx=10, pady=5)
+entry_no_bilik = tk.Entry(main_frame, font=("Helvetica", 12), width=30)
+entry_no_bilik.grid(row=0, column=1, padx=10, pady=5)
+
+select_bilik = ttk.Combobox(main_frame ,="Pilih Saiz Bilik", values = ("2", "4"))
+select_bilik.current(0)
+select_bilik.grid(row=1, column=1, padx=10, pady=5)
+
+tk.Label(main_frame, text="Nama Pelapor", font=("Helvetica", 12), bg=BG_COLOR, fg=TEXT_COLOR).grid(row=2, column=0, sticky="w", padx=10, pady=5)
+isi_nama = tk.Entry(main_frame, font=("Helvetica", 12), width=30)
+isi_nama.grid(row=2, column=1, padx=10, pady=5)
 
 
-tk.Label(main_frame, text="grd", font=("Helvetica", 12), bg=BG_COLOR, fg=TEXT_COLOR).grid(row=1, column=0, sticky="w", padx=10, pady=5)
-entry_kelas = tk.Entry(main_frame, font=("Helvetica", 12), width=30)
-entry_kelas.grid(row=1, column=1, padx=10, pady=5)
-
-
-tk.Label(main_frame, text="rg", font=("Helvetica", 12), bg=BG_COLOR, fg=TEXT_COLOR).grid(row=2, column=0, sticky="w", padx=10, pady=5)
-entry_tarikh = tk.Entry(main_frame, font=("Helvetica", 12), width=30)
-entry_tarikh.grid(row=2, column=1, padx=10, pady=5)
+tk.Label(main_frame, text="Jenis Kerosakan", font=("Helvetica", 12), bg=BG_COLOR, fg=TEXT_COLOR).grid(row=3, column=0, sticky="w", padx=10, pady=5)
+jenis_kerosakan = tk.Entry(main_frame, font=("Helvetica", 12), width=30)
+jenis_kerosakan.grid(row=3, column=1, padx=10, pady=5)
 
 
 button_frame = tk.Frame(window, bg=BG_COLOR)
